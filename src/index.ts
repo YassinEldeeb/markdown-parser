@@ -2,12 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import { performance, PerformanceObserver } from 'perf_hooks'
 
+// Instantiate a new performance observer
 const perfObserver = new PerformanceObserver((items) => {
   items.getEntries().forEach((entry) => {
     console.log(entry)
   })
 })
-
 perfObserver.observe({ entryTypes: ['measure'], buffered: true })
 
 performance.mark('start')
