@@ -1,6 +1,6 @@
 # markdown-parser✨
 
-Progress:
+### Progress:
 - [x] Headings
 - [x] Headings Alternate Syntax
 - [x] Paragraphs
