@@ -13,6 +13,9 @@ perfObserver.observe({ entryTypes: ['measure'], buffered: true })
 performance.mark('start')
 
 // Rules
+type headerSizes = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+type objectType = headerSizes | 'p' | 'separator'
+
 const headings = {
   '#': '1',
   '##': '2',
@@ -42,7 +45,7 @@ const pureMD = fs
   .readFileSync(path.join(__dirname, './sample.md'), 'utf-8')
   .replace(/\r/g, '')
 
-const parsed: { type: string; [key: string]: string }[] = []
+const parsed: { type: objectType; [key: string]: string }[] = []
 
 const linesMD = pureMD.split('\n')
 const blackListedLinesIndexes: number[] = []
@@ -90,7 +93,7 @@ linesMD.forEach((e, i) => {
     if (line.startsWith(symbol)) {
       parsed.push({
         text: formatText(line.replace(symbol, '')),
-        type: 'h' + headings[e as keyof typeof headings],
+        type: ('h' + headings[e as keyof typeof headings]) as headerSizes,
       })
       headingFound = true
       return
@@ -117,7 +120,7 @@ linesMD.forEach((e, i) => {
   // Paragraph
   if (!blackListedLinesIndexes.includes(i)) {
     // Append paragraph to the previous object If:
-    // 1.the last object in parsed is {type: 'p'}
+    // 1.the last object in parsed is { type: 'p' }
     // 2.there's a previous line
     // 3.the previous line doesn't end with 2 or more spaces
     const previousObj = parsed[parsed.length - 1]
