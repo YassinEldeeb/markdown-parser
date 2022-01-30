@@ -1,0 +1,53 @@
+[
+  {
+    "text": "<i>S<i>pecial Big <b>1<b>",
+    "type": "h1"
+  },
+  {
+    "text": "S<b><i>pe<b><i>cial Big 2",
+    "type": "h2"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "text": "This is the first line.",
+    "type": "p"
+  },
+  {
+    "text": "And this is the second line.",
+    "type": "p"
+  },
+  {
+    "text": "I think I'll use it to format all of my documents from now on.",
+    "type": "p"
+  },
+  {
+    "text": "I shouldn't go on another line",
+    "type": "p"
+  },
+  {
+    "text": "Heading level 1",
+    "type": "h1"
+  },
+  {
+    "text": "Heading level 2",
+    "type": "h2"
+  },
+  {
+    "text": "Heading level 3",
+    "type": "h3"
+  },
+  {
+    "text": "Heading level 4",
+    "type": "h4"
+  },
+  {
+    "text": "Heading level 5",
+    "type": "h5"
+  },
+  {
+    "text": "Heading level 6",
+    "type": "h6"
+  }
+]
