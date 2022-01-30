@@ -4,7 +4,7 @@
 S***pe***cial Big 2
 ----
 
----
+*
 
 This is the first line.  
 And this is the second line. 

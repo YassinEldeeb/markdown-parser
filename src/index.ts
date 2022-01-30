@@ -26,6 +26,7 @@ const headings = {
 const allSameChar = (splittedLine: string[], char: string) =>
   splittedLine.every((e) => e === char || e === '') && splittedLine.length > 0
 
+// Todo: *, **, *** should be escaped
 const formatText = (text: string) => {
   const boldRegex = new RegExp('\\*\\*', 'g')
   const italicRegex = new RegExp('\\*', 'g')
@@ -101,7 +102,9 @@ linesMD.forEach((e, i) => {
 
   // Separator Line
   if (
-    allSameChar(splittedLine, '-') &&
+    (allSameChar(splittedLine, '-') ||
+      allSameChar(splittedLine, '*') ||
+      allSameChar(splittedLine, '_')) &&
     splittedLine.length >= 3 &&
     !blackListedLinesIndexes.includes(i)
   ) {

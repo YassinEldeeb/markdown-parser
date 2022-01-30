@@ -8,7 +8,8 @@
     "type": "h2"
   },
   {
-    "type": "separator"
+    "text": "<i>",
+    "type": "p"
   },
   {
     "text": "This is the first line.",
