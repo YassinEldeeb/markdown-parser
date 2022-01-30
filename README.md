@@ -16,7 +16,7 @@ Progress:
 - [ ] Images
 - [ ] Lists
 - [ ] Escaping Backticks
-- [ ] Horizontal Rules
+- [x] Horizontal Rules
 - [ ] Links
 - [ ] Adding Titles
 - [ ] URLs and Email Addresses
